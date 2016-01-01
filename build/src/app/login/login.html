@@ -1,0 +1,25 @@
+<!--Sign In-->
+<div class="container">
+    <div>
+        <div>
+            <form name="userinput" ng-submit="loginscope.LoginTo()" novalidate>
+                <!-- EMAIL -->
+                <div class="form-group" ng-class="{'has-error' : userinput.username.$invalid && !userinput.username.$pristine }">
+                    <input type="email" name="username" placeholder="Username..." class="form-control" ng-model="loginscope.newUser.email" required>
+                    <p ng-show="userinput.username.$invalid && !userinput.username.$pristine" class="help-block">Enter a valid email.</p>
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group" ng-class="{ 'has-error' : userinput.password.$invalid && !userinput.password.$pristine }">
+                    <input type="password" name="password" placeholder="Password..." class="form-control" ng-model="loginscope.password"
+                    required>
+                </div>
+
+                <input type="submit" class="btn btn-primary" ng-disabled="userinput.$invalid" value="Sign in!" />
+                <br/>
+                <br/>
+
+            </form>
+        </div>
+    </div>
+</div>

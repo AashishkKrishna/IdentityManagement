@@ -1,0 +1,18 @@
+
+
+<h3>
+    dASHBOARD
+        {{dashboardscope.userid}}
+</h3>
+<ul class="nav nav-pills">
+    <li role="presentation" class="active"><button type="submit" class="btn btn-primary">Home</button></li>
+    <li role="presentation">
+        <button type="submit" class="btn btn-primary" 
+        ng-click="dashboardscope.gotoAccountspage(dashboardscope.userid)">Accounts</button>
+        <br/>
+    </li>
+</ul>
+<hr/>
+
+<div ui-view="accounts"></div>
+
